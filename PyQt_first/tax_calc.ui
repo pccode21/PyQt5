@@ -14,7 +14,7 @@
    <string>我的第一个 PyQt5 app</string>
   </property>
   <property name="windowIcon">
-   <iconset>../../PythonLearn/src/images/LOGO.ico</iconset>
+   <iconset>../../PyQt5/PyQt_first/images/LOGO.ico</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QTextEdit" name="price_box">
