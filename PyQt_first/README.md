@@ -11,10 +11,13 @@
 ![](https://github.com/pccode21/PyQt5/blob/master/PyQt_first/images/qt21-1024x616.gif) <br>
 因此，无需费力地手工布置设计。一切都将以图形方式完成。<br>
 所有[源代码都在这里](https://github.com/pccode21/PyQt5/tree/master/PyQt_first)。<br>
+
 二.先决条件
 ----------
+
 三.入门
 -------
+
 四.编写代码
 -----------
 Qt的代码是面向对象的，并且易于遵循。我们添加的每个小部件都是一个对象，它具有自己的功能，例如toPlainText（）（用于读取框中的值）。这使得它非常容易使用。<br>
