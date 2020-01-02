@@ -8,3 +8,6 @@
 ![](https://github.com/pccode21/PyQt5/raw/master/PyQt_first/images/qt19.jpg) <br>
 一个简单的GUI应用程序，可以获取价格，税率并计算最终价格。<br>
 大多数关于GUI应用程序的教程都尝试使用代码来布局GUI块，但这非常痛苦。我们将使用一流的QT Designer工具来布局我们的应用程序：<br>
+![](https://github.com/pccode21/PyQt5/raw/master/PyQt_first/images/qt21-1024x616.jpg) <br>
+因此，无需费力地手工布置设计。一切都将以图形方式完成。<br>
+所有[源代码都在这里](https://github.com/pccode21/PyQt5/raw/master/PyQt_first)。
