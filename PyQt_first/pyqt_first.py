@@ -12,6 +12,9 @@ import sys
 
 from PyQt5 import QtWidgets, uic
 
+__version__ = '0.1'
+__author__ = 'LinXuDong'
+
 
 qtCreatorFile = r".\PyQt5\PyQt_first\tax_calc.ui"  # Enter *.ui file here.
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
@@ -21,6 +24,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         QtWidgets.QMainWindow.__init__(self)
         Ui_MainWindow.__init__(self)
+        self.setFixedSize(322, 276)
         self.setupUi(self)
         self.calc_tax_button.clicked.connect(self.calculate_tax)
 
