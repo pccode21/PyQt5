@@ -26,6 +26,9 @@
      <height>35</height>
     </rect>
    </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QWidget" name="gridLayoutWidget">
    <property name="geometry">
@@ -33,7 +36,7 @@
      <x>10</x>
      <y>50</y>
      <width>226</width>
-     <height>175</height>
+     <height>180</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout">
