@@ -17,6 +17,9 @@
    <iconset>
     <normaloff>images/LOGO.ico</normaloff>images/LOGO.ico</iconset>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/images/bg.png);</string>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <property name="sizePolicy">
     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
@@ -582,6 +585,8 @@ color: #4CAF50;
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="bg.qrc"/>
+ </resources>
  <connections/>
 </ui>

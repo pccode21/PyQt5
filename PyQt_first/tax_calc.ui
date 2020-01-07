@@ -36,6 +36,12 @@
    <iconset>
     <normaloff>images/LOGO.ico</normaloff>images/LOGO.ico</iconset>
   </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label_3">
     <property name="geometry">
@@ -56,6 +62,9 @@
       <strikeout>false</strikeout>
       <kerning>true</kerning>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Sales Tax Calculator</string>
@@ -81,6 +90,9 @@
       <kerning>true</kerning>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
     <property name="text">
      <string>Price</string>
     </property>
@@ -93,6 +105,9 @@
       <width>194</width>
       <height>71</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -114,6 +129,9 @@
       <strikeout>false</strikeout>
       <kerning>true</kerning>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Tax Rate</string>
@@ -151,6 +169,9 @@
       <kerning>true</kerning>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
     <property name="text">
      <string>Calculate Tax</string>
     </property>
@@ -167,7 +188,17 @@
       <height>71</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
    </widget>
+   <zorder>label_3</zorder>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>tax_rate</zorder>
+   <zorder>calc_tax_button</zorder>
+   <zorder>results_window</zorder>
+   <zorder>price_box</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QMenuBar" name="menubar">
@@ -187,6 +218,8 @@
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="bg.qrc"/>
+ </resources>
  <connections/>
 </ui>
