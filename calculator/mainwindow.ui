@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Calculon</string>
+   <string>My first calculator</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>images/LOGO.ico</normaloff>images/LOGO.ico</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="sizePolicy">
@@ -547,7 +551,7 @@ color: #4CAF50;
      <x>0</x>
      <y>0</y>
      <width>484</width>
-     <height>22</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">

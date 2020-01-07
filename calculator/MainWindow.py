@@ -2,16 +2,21 @@
 
 # Form implementation generated from reading ui file 'mainwindow.ui'
 #
-# Created by: PyQt5 UI code generator 5.10
+# Created by: PyQt5 UI code generator 5.13.2
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(484, 433)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(r".\PyQt5\calculator\images\LOGO.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        MainWindow.setWindowIcon(icon)
         self.centralWidget = QtWidgets.QWidget(MainWindow)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Maximum)
         sizePolicy.setHorizontalStretch(0)
@@ -19,11 +24,8 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.centralWidget.sizePolicy().hasHeightForWidth())
         self.centralWidget.setSizePolicy(sizePolicy)
         self.centralWidget.setObjectName("centralWidget")
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.centralWidget)
-        self.verticalLayout_2.setContentsMargins(11, 11, 11, 11)
-        self.verticalLayout_2.setSpacing(6)
-        self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.verticalLayout = QtWidgets.QVBoxLayout()
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.centralWidget)
+        self.verticalLayout.setContentsMargins(11, 11, 11, 11)
         self.verticalLayout.setSpacing(6)
         self.verticalLayout.setObjectName("verticalLayout")
         self.lcdNumber = QtWidgets.QLCDNumber(self.centralWidget)
@@ -247,10 +249,9 @@ class Ui_MainWindow(object):
         self.pushButton_eq.setObjectName("pushButton_eq")
         self.gridLayout.addWidget(self.pushButton_eq, 5, 2, 1, 2)
         self.verticalLayout.addLayout(self.gridLayout)
-        self.verticalLayout_2.addLayout(self.verticalLayout)
         MainWindow.setCentralWidget(self.centralWidget)
         self.menuBar = QtWidgets.QMenuBar(MainWindow)
-        self.menuBar.setGeometry(QtCore.QRect(0, 0, 484, 22))
+        self.menuBar.setGeometry(QtCore.QRect(0, 0, 484, 23))
         self.menuBar.setObjectName("menuBar")
         self.menuFile = QtWidgets.QMenu(self.menuBar)
         self.menuFile.setObjectName("menuFile")
@@ -271,7 +272,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Calculon"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "My first calculator"))
         self.pushButton_n4.setText(_translate("MainWindow", "4"))
         self.pushButton_n4.setShortcut(_translate("MainWindow", "4"))
         self.pushButton_n1.setText(_translate("MainWindow", "1"))
@@ -315,4 +316,3 @@ class Ui_MainWindow(object):
         self.actionExit.setShortcut(_translate("MainWindow", "Ctrl+Q"))
         self.actionReset.setText(_translate("MainWindow", "Reset"))
         self.actionReset.setShortcut(_translate("MainWindow", "Ctrl+R"))
-

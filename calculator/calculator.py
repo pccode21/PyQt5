@@ -1,9 +1,7 @@
-from PyQt5.QtGui import *
-from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
-
+import sys
+from PyQt5.QtWidgets import QApplication
+from PyQt5.QtWidgets import QMainWindow
 import operator
-
 from MainWindow import Ui_MainWindow
 
 # Calculator state.
@@ -14,6 +12,7 @@ INPUT = 1
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self, *args, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
+        self.setFixedSize(484, 433)
         self.setupUi(self)
 
         # Setup numbers.
@@ -104,9 +103,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 self.display()
 
 
-if __name__ == '__main__':
-    app = QApplication([])
-    app.setApplicationName("Calculon")
-
+def main():
+    app = QApplication(sys.argv)
+    app.setApplicationName("My first calculator")
     window = MainWindow()
-    app.exec_()
+    window.show()
+    sys.exit(app.exec_())
+
+
+if __name__ == '__main__':
+    main()
