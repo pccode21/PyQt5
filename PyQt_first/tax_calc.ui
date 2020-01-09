@@ -218,8 +218,6 @@
    </property>
   </widget>
  </widget>
- <resources>
-  <include location="bg.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
