@@ -5,8 +5,8 @@
 from PyQt5.QtWidgets import QDialog, QLabel, QLineEdit, QPushButton, QMessageBox, QApplication
 from PyQt5.QtCore import pyqtSignal, Qt
 from PyQt5.QtGui import QFont
-from Gui.registerGui import RegisterGui
-from Gui.baseGui import BaseGui
+from registerGui import RegisterGui
+from baseGui import BaseGui
 
 
 class LoginGui(QDialog, BaseGui):

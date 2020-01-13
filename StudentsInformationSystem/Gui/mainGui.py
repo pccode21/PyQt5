@@ -5,10 +5,10 @@
 from PyQt5.QtWidgets import QWidget, QLabel, QLineEdit, QTableWidget, QTableWidgetItem, QAbstractItemView, QHeaderView, QPushButton, QMenuBar, QMenu, QAction, QGridLayout, QApplication
 from PyQt5.QtCore import pyqtSignal, Qt
 from PyQt5.QtGui import QFont
-from Gui.helpGui import HelpGui
-from Gui.enterGui import EnterGui
-from Gui.delGui import DelGui
-from Gui.baseGui import BaseGui
+from helpGui import HelpGui
+from enterGui import EnterGui
+from delGui import DelGui
+from baseGui import BaseGui
 
 
 class MainGui(QWidget, BaseGui):
