@@ -11,11 +11,11 @@ import sys
 import requests
 from urllib.parse import urlencode
 
-OPENWEATHERMAP_API_KEY = os.environ.get('b020112734ca76c7df0ccad361a58fa3')
+# OPENWEATHERMAP_API_KEY = os.environ.get('b020112734ca76c7df0ccad361a58fa3')
 
 """
-Get an API key from https://openweathermap.org/ to use with this
-application.
+从https://openweathermap.org/获取API密钥以与此结合使用
+应用.
 
 """
 
@@ -27,7 +27,7 @@ def from_ts_to_time_of_day(ts):
 
 class WorkerSignals(QObject):
     '''
-    Defines the signals available from a running worker thread.
+    定义正在运行的工作线程可用的信号.
     '''
     finished = pyqtSignal()
     error = pyqtSignal(str)
@@ -35,7 +35,7 @@ class WorkerSignals(QObject):
 
 class WeatherWorker(QRunnable):
     '''
-    Worker thread for weather updates.
+    工作线程天气更新.
     '''
     signals = WorkerSignals()
     is_interrupted = False
@@ -56,7 +56,7 @@ class WeatherWorker(QRunnable):
             r = requests.get(url)
             weather = json.loads(r.text)
 
-            # Check if we had a failure (the forecast will fail in the same way).
+            # 检查我们是否失败（预测将以同样的方式失败）.
             if weather['cod'] != 200:
                 raise Exception(weather['message'])
 
@@ -81,7 +81,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         self.pushButton.pressed.connect(self.update_weather)
 
-        self.threadpool = QThreadPool()
+        self.threadpool = QThreadPool() # 创建线程池类，以处理运行工作程序
 
         self.show()
 
@@ -106,7 +106,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.humidityLabel.setText("%d" % weather['main']['humidity'])
 
         self.sunriseLabel.setText(from_ts_to_time_of_day(weather['sys']['sunrise']))
-
+# 使用自定义from_ts_to_time_of_day函数处理时间戳，以am / pm格式返回用户友好的一天中的时间，且不带前导零。
         self.weatherLabel.setText("%s (%s)" % (
             weather['weather'][0]['main'],
             weather['weather'][0]['description']
@@ -119,6 +119,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             getattr(self, 'forecastTime%d' % n).setText(from_ts_to_time_of_day(forecast['dt']))
             self.set_weather_icon(getattr(self, 'forecastIcon%d' % n), forecast['weather'])
             getattr(self, 'forecastTemp%d' % n).setText("%.1f °C" % forecast['main']['temp'])
+# 从weatherdict 设置当前的天气图标，然后遍历所提供的前5个天气预报。预报图标，时间和温度标签在Qt Designer中使用forecastIcon<n>，forecastTime<n>和定义 forecastTemp<n>，可以轻松地依次迭代它们并使用getattr当前迭代索引检索它们。
 
     def set_weather_icon(self, label, weather):
         label.setPixmap(
