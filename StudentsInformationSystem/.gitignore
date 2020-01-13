@@ -1,0 +1,8 @@
+﻿# 忽略vscode配置文件夹
+.vscode/
+
+# 忽略虚拟环境
+env/
+
+# 忽略pyc文件
+*.pyc
