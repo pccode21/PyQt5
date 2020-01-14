@@ -5,7 +5,7 @@
 from PyQt5.QtWidgets import QWidget, QApplication, QLabel, QLineEdit, QPushButton, QGridLayout, QMessageBox
 from PyQt5.QtCore import pyqtSignal, Qt, QRegExp
 from PyQt5.QtGui import QFont, QRegExpValidator
-from baseGui import BaseGui
+from Gui.baseGui import BaseGui
 
 
 class EnterGui(QWidget, BaseGui):

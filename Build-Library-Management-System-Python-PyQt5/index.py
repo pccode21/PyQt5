@@ -8,9 +8,9 @@ import datetime
 from xlrd import *
 from xlsxwriter import *
 
-ui,_ = loadUiType('library.ui')
+ui,_ = loadUiType(r'.\PyQt5\Build-Library-Management-System-Python-PyQt5\library.ui')
 
-login,_ = loadUiType('login.ui')
+login,_ = loadUiType(r'.\PyQt5\Build-Library-Management-System-Python-PyQt5\login.ui')
 
 
 
@@ -19,12 +19,12 @@ class Login(QWidget , login):
         QWidget.__init__(self)
         self.setupUi(self)
         self.pushButton.clicked.connect(self.Handel_Login)
-        style = open('themes/darkorange.css' , 'r')
+        style = open(r'.\PyQt5\Build-Library-Management-System-Python-PyQt5\themes\darkorange.css' , 'r')
         style = style.read()
         self.setStyleSheet(style)
 
     def Handel_Login(self):
-        self.db = MySQLdb.connect(host='localhost' , user='root' , password ='toor' , db='library')
+        self.db = MySQLdb.connect(host='localhost' , user='root' , password ='Lxd05230708', db='library')
         self.cur = self.db.cursor()
 
         username = self.lineEdit.text()
@@ -173,7 +173,7 @@ class MainApp(QMainWindow , ui):
         self.db = MySQLdb.connect(host='localhost', user='root', password='toor', db='library')
         self.cur = self.db.cursor()
 
-        self.cur.execute(''' 
+        self.cur.execute('''
             SELECT book_name , client , type , date , to_date FROM dayoperations
         ''')
 
@@ -291,7 +291,7 @@ class MainApp(QMainWindow , ui):
         search_book_title = self.lineEdit_5.text()
 
         self.cur.execute('''
-            UPDATE book SET book_name=%s ,book_description=%s ,book_code=%s ,book_category=%s ,book_author=%s ,book_publisher=%s ,book_price=%s WHERE book_name = %s            
+            UPDATE book SET book_name=%s ,book_description=%s ,book_code=%s ,book_category=%s ,book_author=%s ,book_publisher=%s ,book_price=%s WHERE book_name = %s
         ''', (book_title,book_description,book_code,book_category,book_author,book_publisher , book_price , search_book_title))
 
         self.db.commit()
@@ -422,7 +422,7 @@ class MainApp(QMainWindow , ui):
         password2 = self.lineEdit_12.text()
 
         if password == password2 :
-            self.cur.execute(''' 
+            self.cur.execute('''
                 INSERT INTO users(user_name , user_email , user_password)
                 VALUES (%s , %s , %s)
             ''' , (username , email , password))
@@ -643,7 +643,7 @@ class MainApp(QMainWindow , ui):
         self.db = MySQLdb.connect(host='localhost', user='root', password='toor', db='library')
         self.cur = self.db.cursor()
 
-        self.cur.execute(''' 
+        self.cur.execute('''
             SELECT book_name , client , type , date , to_date FROM dayoperations
         ''')
 
