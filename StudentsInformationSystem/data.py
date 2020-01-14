@@ -9,7 +9,7 @@ from Gui.registerGui import RegisterGui
 from Gui.mainGui import MainGui
 from Gui.enterGui import EnterGui
 from Gui.delGui import DelGui
-from msg import Msg
+from Gui.msg import Msg
 
 
 class Data(QObject):
@@ -30,7 +30,7 @@ class Data(QObject):
 
     def init(self):
         # 数据库操作
-        self.connection = pymysql.connect(host="localhost", port=3306, user="root", password="123456", db="stuinfosystem", charset="utf8", cursorclass=pymysql.cursors.DictCursor)
+        self.connection = pymysql.connect(host="localhost", port=3306, user="root", password="Lxd05230708", db="stuinfosystem", charset="utf8mb4", cursorclass=pymysql.cursors.DictCursor)
         self.cursor = self.connection.cursor()
 
     # 添加与各个界面的信号交互

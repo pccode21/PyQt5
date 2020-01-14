@@ -4,7 +4,7 @@
 
 from PyQt5.QtCore import pyqtSignal
 from PyQt5.QtWidgets import QMessageBox
-from msg import Msg
+from Gui.msg import Msg
 
 
 class BaseGui:
