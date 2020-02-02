@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UI_PlayerWin</class>
+ <widget class="QWidget" name="UI_PlayerWin">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>138</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>媒体播放器</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>播放器.ico</normaloff>播放器.ico</iconset>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>请输入要播放的媒体文件名：</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>50</y>
+     <width>331</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BtPlay">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>90</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>播放</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>播放.ico</normaloff>播放.ico</iconset>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>BtPlay</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_PlayerWin</receiver>
+   <slot>playMedia()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>201</x>
+     <y>96</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>577</x>
+     <y>102</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>playMedia()</slot>
+ </slots>
+</ui>
