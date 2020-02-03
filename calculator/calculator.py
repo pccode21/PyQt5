@@ -105,7 +105,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 def main():
     app = QApplication(sys.argv)
-    app.setApplicationName("My first calculator")
+    app.setApplicationName("林旭东的计算器")
     window = MainWindow()
     window.show()
     sys.exit(app.exec_())

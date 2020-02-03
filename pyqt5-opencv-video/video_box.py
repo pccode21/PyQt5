@@ -5,6 +5,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from cv2 import *
+from PyQt5 import QtGui
 
 
 class VideoBox(QWidget):
@@ -27,8 +28,12 @@ class VideoBox(QWidget):
 
         # 组件展示
         self.pictureLabel = QLabel()
-        init_image = QPixmap("resource/cat.jpeg").scaled(self.width(), self.height())
+        init_image = QPixmap(r"./PyQt5/pyqt5-opencv-video/resource/cat.jpeg").scaled(self.width(), self.height())
         self.pictureLabel.setPixmap(init_image)
+
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(r".\PyQt5\calculator\images\LOGO.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.setWindowIcon(icon)
 
         self.playButton = QPushButton()
         self.playButton.setEnabled(True)
@@ -191,7 +196,8 @@ class VideoTimer(QThread):
 
 if __name__ == "__main__":
     mapp = QApplication(sys.argv)
+    mapp.setApplicationName("林旭东的视频播放器")
     mw = VideoBox()
-    mw.set_video("resource/video.mp4", VideoBox.VIDEO_TYPE_OFFLINE, False)
+    mw.set_video(r"./PyQt5/pyqt5-opencv-video/resource/video.mp4", VideoBox.VIDEO_TYPE_OFFLINE, False)
     mw.show()
     sys.exit(mapp.exec_())
